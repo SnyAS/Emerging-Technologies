@@ -38,8 +38,9 @@ library SafeMath{
 contract Operations{
     // When referencing SafeMath allow shortcut to Operations functions
     using SafeMath for uint256;
-    function op() public view returns (uint256) {
-        uint256 result = SafeMath.addition(3,4);
+    function op(uint256 a, uint256 b) public view returns (uint256) {
+        //uint256 result = SafeMath.addition(3,4);
+        uint256 result = a.addition(b);
         return uint256(result);
     }
 }
