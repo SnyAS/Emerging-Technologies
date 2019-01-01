@@ -1,34 +1,45 @@
 /**
 * Operations with safety checks that throw on error
 */
-using SafeMath for uint256;
+pragma solidity ^0.4.19;
 
-uint256 result;
+library SafeMath{
+    struct SafeMath {
+        uint256 result;
+    }
+    //safety checks for addition
+    function addition(uint256 a, uint256 b) internal constant returns (uint256) {
+        uint256 result= a + b;
+        assert(result >= a);
+        return result;
+    } 
+    
+    //safety checks for subtraction
+    function subtraction(uint256 a, uint256 b) internal constant returns (uint256) {
+        assert(b <= a);
+        return a - b;
+    }
+    
+    //safety checks for multiplication
+    function multiplication(uint256 a, uint256 b) internal constant returns (uint256) {
+        uint256 result = a * b;
+        assert(a == 0 || result / a == b);
+        return result;
+    }
+     
+     //safety checks for division
+    function division(uint256 a, uint256 b) internal constant returns (uint256) {
+        uint256 result = a / b;
+        assert(a == b * result + a % b);
+        return result;
+    }
+}    
 
-//safety checks for addition
-function addition(uint256 a, uint256 b) internal constant returns (uint256) {
-    uint256 result = a + b;
-    assert(result >= a);
-    return result;
-} 
-
-//safety checks for subtraction
-function subtraction(uint256 a, uint256 b) internal constant returns (uint256) {
-    assert(b <= a);
-    return a - b;
+contract Operations{
+    // When referencing SafeMath allow shortcut to Operations functions
+    using SafeMath for uint256;
+    function op() public view returns (uint256) {
+        uint256 result = SafeMath.addition(3,4);
+        return uint256(result);
+    }
 }
-
-//safety checks for multiplication
-function multiplication(uint256 a, uint256 b) internal constant returns (uint256) {
-    uint256 result = a * b;
-    assert(a == 0 || result / a == b);
-    return result;
-}
- 
- //safety checks for division
-function division(uint256 a, uint256 b) internal constant returns (uint256) {
-    uint256 result = a / b;
-    assert(a == b * result + a % b);
-    return result;
-}
-
