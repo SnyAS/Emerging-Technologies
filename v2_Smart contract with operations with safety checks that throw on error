@@ -1,0 +1,10 @@
+contract MyContract {
+
+using SafeMath for uint256;    
+uint256 result;
+
+    function SafeAdd(uint256 a, uint256 b) {
+      result = 0;
+      result = a.add(b);
+    }
+}
