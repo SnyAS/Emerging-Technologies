@@ -74,3 +74,8 @@ In order to clarify how a development paper could be created, one example is giv
   5.	Choosing the first one, you find a paper on stronger encryption than PPKI, read it and design a class implementing it, giving the algorithm in pseudocode. Or choosing the second one, design an algorithm doing this, showing it as a diagram.
   6.	The report will describe Ethereum, its origin, usage, maturity, principles and the architecture. Refer to sources. You describe both options for improvement (security and PoE.) You pick one and describe why you think this one is the best to tackle. Refer to both papers found and maybe the Boston Consultancy Matrix to support why you chose this and not the other.
   7.	Give reference list.
+
+
+
+
+https://remix.ethereum.org./#optimize=false&version=soljson-v0.4.23+commit.124ca40d.js
