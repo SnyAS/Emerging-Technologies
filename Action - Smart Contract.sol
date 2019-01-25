@@ -1,4 +1,4 @@
-//https://medium.com/coinmonks/write-a-simple-contract-on-top-of-ethereum-92b543594e84 <-website with tutorial
+//https://remix.ethereum.org./#optimize=true&version=soljson-v0.4.25+commit.59dbf8f1.js
 //assigning the version number
 //website to check latest version https://github.com/ethereum/solc-js/releases
 //version:0.4.25+commit.59dbf8f1.Emscripten.clang
